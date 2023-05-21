@@ -1,0 +1,9 @@
+# Describe GuardDuty findings that were detected related to the brute force attack
+"Severity": 8,
+"Title": "i-09bb8db110d712e37 is performing SSH brute force attacks against 10.192.10.149.",
+"Type": "UnauthorizedAccess:EC2/SSHBruteForce",
+
+# Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
+After research the AWS Guard Duty documentation page, I found https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_data-sources.html
+"GuardDuty uses the foundational data sources to detect communication with known malicious domains and IP addresses and identify anomalous behavior. While in transit from these sources to GuardDuty, all of the log data is encrypted. GuardDuty extracts various fields from these logs sources for profiling and anomaly detection, and then discards these logs."
+"GuardDuty uses each supported data source: AWS CloudTrail event logs, AWS CloudTrail management events, VPC Flow Logs, DNS logs" GuardDuty automatically starts to monitor these log sources.

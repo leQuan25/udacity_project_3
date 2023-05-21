@@ -1,0 +1,7 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+S3 bucket setting using policy name InstanceRolePolicy-C3 with allow action to access entire data. It shoud restrict and control access with a specific instance role.
+
+# Poor practice 2
+S3 bucket storage secret recipes does not enable server-side encryption to protect sensitive data. When the data is not protect it will easily to attack.
